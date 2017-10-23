@@ -11,7 +11,8 @@ int (*specifiers(const char *matchchar))(va_list)
 	unsigned int i;
 
 	_types j[] = {
-		{"i", printInt},
+	        {"%", printchar},
+      		{"i", printInt},
 		{"d", printInt},
 		{"s", printstring},
 		{"c", printchar},
