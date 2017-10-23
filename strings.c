@@ -37,3 +37,9 @@ int printchar(va_list c)
 	_putchar(i);
 	return (i);
 }
+
+int putPercent(char s)
+{
+	_putchar(s);
+	return (1);
+}
