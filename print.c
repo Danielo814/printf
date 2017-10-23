@@ -11,6 +11,8 @@ int (*specifiers(const char *matchchar))(va_list)
 	unsigned int i;
 
 	_types j[] = {
+		{"i", printInt},
+		{"d", printInt},
 		{"s", printstring},
 		{"c", printchar},
 		{NULL, NULL}
@@ -38,12 +40,22 @@ int _printf(const char *format, ...)
 	va_list ap;
 	int (*f)(va_list);
 
+	if (format == NULL)
+	{
+		_putchar('\n');
+		return (-1);
+	}
+
 	va_start(ap, format);
 	for (i = 0; format[i]; i++)
 	{
 		if (format[i] == '%')
 		{
 			f = specifiers(&format[i + 1]);
+			if (f == NULL)
+			{
+				return (-1);
+			}
 			count += f(ap);
 			i += 2;
 		}

@@ -2,6 +2,7 @@
 #define __HOLBERTONH__
 #include <stdarg.h>
 #include <stdlib.h>
+#include <unistd.h>
 /**
  * struct print - printf functionparameters
  * @a: conversion specifier to match
@@ -14,6 +15,8 @@ typedef struct print
 	int (*f)(va_list);
 } _types;
 
+int printInt(va_list d);
+int printInt(va_list i);
 int printstring(va_list s);
 int printchar(va_list c);
 int _printf(const char *format, ...);
