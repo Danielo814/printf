@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdarg.h>
-#include <stdlib.h>
 /**
  * specifiers - checks for matching character and returns correlating function
  * @matchchar: character to match from printf format string
