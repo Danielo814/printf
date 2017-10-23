@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdarg.h>
 /**
  * printstring - prints a string
  *
