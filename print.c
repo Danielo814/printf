@@ -50,7 +50,12 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] == '%')
+		{
+			_putchar('%');
+			count++;
+		}
+		else if (format[i] == '%' && format[i + 1] != '%')
 		{
 			f = specifiers(&format[i + 1]);
 			if (f == NULL)
@@ -60,7 +65,7 @@ int _printf(const char *format, ...)
 			count += f(ap);
 			i += 2;
 		}
-		count += _putchar(format[i]);
+			count += _putchar(format[i]);
 	}
 	va_end(ap);
 	return (count);
