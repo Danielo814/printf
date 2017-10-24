@@ -30,5 +30,6 @@ int printInt(va_list i)
 		c++;
 	}
 	_putchar((f / m) + '0');
+	c++;
 	return (c);
 }
