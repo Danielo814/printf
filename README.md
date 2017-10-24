@@ -46,3 +46,5 @@ Task |	Description
 
 **holberton.h:** This is a header file that contains all function prototypes used for this assignment.
 # Authors
+**Daniel Ojeda** [Twitter](https://twitter.com/DanielC_Ojeda) | ![GitHubLogo](/images/logo.png) [Github](https://github.com/Danielo814)
+**James Heck** [Twitter](https://twitter.com/notjamesheck)  [Github](https://github.com/notjamesheck)
