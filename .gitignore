@@ -1,4 +1,4 @@
 #ignore main file
 *main.c
 #ignore emacs duplicates
-*.c~ 
+*~ 
