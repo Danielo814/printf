@@ -14,7 +14,7 @@ int printInt(va_list i)
 	if (f < 0)
 	{
 		_putchar('-');
-		f *= -1;
+		f = f - f - f;
 		c += 1;
 	}
 	if (f < 10)

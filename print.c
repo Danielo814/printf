@@ -69,8 +69,8 @@ int _printf(const char *format, ...)
 				continue;
 			}
 			count += f(ap);
-
-			i += 2;
+			i += 1;
+			continue;
 		}
 			count += _putchar(format[i]);
 	}
