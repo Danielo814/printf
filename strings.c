@@ -38,6 +38,11 @@ int printchar(va_list c)
 	return (1);
 }
 
+/**
+* putPercent - print char
+* @s: char parameter
+* Return: sizof char
+*/
 int putPercent(char s)
 {
 	_putchar(s);

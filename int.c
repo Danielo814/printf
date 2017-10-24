@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
 * intPrint - print integer by decimal place
 * @a: integer parameter
@@ -35,5 +36,5 @@ int printInt(va_list i)
 	a = va_arg(i, int);
 
 	intPrint(a);
-	return (sizeof(int));
+	return (4);
 }

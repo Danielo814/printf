@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * specifiers - checks for matching character and returns correlating function
  * @matchchar: character to match from printf format string
@@ -11,8 +12,7 @@ int (*specifiers(const char *matchchar))(va_list)
 	unsigned int i;
 
 	_types j[] = {
-	        {"%", printchar},
-      		{"i", printInt},
+		{"i", printInt},
 		{"d", printInt},
 		{"s", printstring},
 		{"c", printchar},
