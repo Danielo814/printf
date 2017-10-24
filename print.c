@@ -43,7 +43,6 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 	{
-		_putchar('\n');
 		return (-1);
 	}
 
@@ -52,12 +51,11 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%' && format[i + 1] == '\0')
 		{
-			_putchar('\n');
 			return (-1);
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
-			_putchar('%');
+			_putchar(format[i]);
 			count++;
 			i += 2;
 		}
