@@ -35,10 +35,6 @@ Author's comment, I want to associate each check with a specific conditition
   len2 = printf("Character:[%c]\n", -2100);
   printf("%i %i\n", len, len2);
 
-  len = _printf("Character:[%++-- .0c]\n", 'B');
-  len2 = printf("Character:[%++-- .0c]\n", 'B');
-  printf("%i %i\n", len, len2);
-
   /* print strings */
 
   /* literal into a single %s */
@@ -62,10 +58,6 @@ Author's comment, I want to associate each check with a specific conditition
   len2 = printf("My string is: %s\n", NULL);
   printf("%i %i\n", len, len2);
 
-  len = _printf("Weird specifier, %-----.5s\n", "abcdefg!"); /* this only prints 5 chars */
-  len2 = printf("Weird specifier, %-----.5s\n", "abcdefg!"); /* if no value, print 0! */
-  printf("%i %i\n", len, len2);
-
   /* weird specifiers */
   len = _printf("Percent:[%%]\n");
   len2 = printf("Percent:[%%]\n");
@@ -75,7 +67,7 @@ Author's comment, I want to associate each check with a specific conditition
   len2 = printf("Percent :[%%c]\n");
   printf("%i %i\n", len, len2);
 
-  len = _printf("Percents:[%%%%]\n");
+  len = _printf("_Percents:[%%%%]\n");
   len2 = printf("Percents:[%%%%]\n");
   printf("%i %i\n", len, len2);
 

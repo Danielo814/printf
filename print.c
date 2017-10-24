@@ -56,7 +56,8 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
 			count += putPercent(format[i], format[i + 1]);
-			i += 2;
+			i += 1;
+			continue;
 		}
 		else if (format[i] == '%' && format[i + 1] != '%')
 		{
