@@ -12,7 +12,7 @@ int printstring(va_list s)
 	char *string = va_arg(s, char *);
 
 	if (string == NULL)
-		string = "(nill)";
+		string = "(null)";
 	i = 0;
 	while (string[i] != '\0')
 	{
