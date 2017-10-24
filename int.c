@@ -11,6 +11,12 @@ int printInt(va_list i)
 
 	f = va_arg(i, int);
 
+	if (i == NULL)
+	{
+		_putchar('\n');
+		return (0);
+	}
+
 	if (f < 0)
 	{
 		_putchar('-');
