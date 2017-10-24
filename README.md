@@ -12,7 +12,7 @@ This is a custom version of printf that was made using key concepts that Holbert
 **Decimal:** ```_printf("%d\n", 814)``` **Output:** ```814```
 
 **Integer:** ```_printf("%i\n", 77)``` **Output:** ```77```
-# Description
+# Tasks
 Task |	Description
 - [x] 0    | Write a function that produces output according to conversion specifiers ```c```, ```s```, and ```%```.
 - [x] 1    | Handle the conversion specifiers ```d``` and ```i```
