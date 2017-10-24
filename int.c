@@ -13,7 +13,6 @@ int printInt(va_list i)
 
 	if (i == NULL)
 	{
-		_putchar('\n');
 		return (0);
 	}
 
