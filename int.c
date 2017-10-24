@@ -7,7 +7,7 @@
 */
 int printInt(va_list i)
 {
-	unsigned int m = 1, c = 1;
+	unsigned int m = 1, c = 0;
 
 	int f = va_arg(i, int);
 
@@ -15,24 +15,20 @@ int printInt(va_list i)
 	{
 		_putchar('-');
 		f = f - f - f;
-		c += 1;
+		c++;
 	}
 
-	/*if (f < 10)
-	{
-		_putchar(f);
-		return (c);
-	}*/
 	while ((f / m) >= 10)
 	{
 		m *= 10;
-		c++;
 	}
-	m *= 10;
 	while (m > 1)
 	{
-		_putchar(((f % m) / (m / 10)) + '0');
+		_putchar((f / m) + '0');
+		f %= m;
 		m /= 10;
+		c++;
 	}
+	_putchar((f / m) + '0');
 	return (c);
 }
