@@ -3,6 +3,8 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
+#include <limits.h>
 /**
  * struct print - printf functionparameters
  * @a: conversion specifier to match
