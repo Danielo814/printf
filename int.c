@@ -21,7 +21,7 @@ int printInt(va_list i)
 	if (f < 10)
 	{
 		_putchar(f);
-		return (c);
+		return (1);
 	}
 	while ((f / m) >= 10)
 	{
