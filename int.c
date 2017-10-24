@@ -7,9 +7,9 @@
 */
 int printInt(va_list i)
 {
-	int f = 0, m = 1, c = 1;
+	unsigned int m = 1, c = 1;
 
-	f = va_arg(i, int);
+	int f = va_arg(i, int);
 
 	if (f < 0)
 	{
@@ -18,11 +18,11 @@ int printInt(va_list i)
 		c += 1;
 	}
 
-	if (f < 10)
+	/*if (f < 10)
 	{
 		_putchar(f);
 		return (c);
-	}
+	}*/
 	while ((f / m) >= 10)
 	{
 		m *= 10;
