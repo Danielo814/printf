@@ -1,40 +1,37 @@
 #include "holberton.h"
 
 /**
-* intPrint - print integer by decimal place
-* @a: integer parameter
-* Return: void
-*/
-
-void intPrint(int a)
-{
-	if (a == 0)
-	{
-		_putchar('0');
-	}
-	if (a < 0)
-	{
-		_putchar('-');
-		a *= -1;
-	}
-	if (a / 10)
-	{
-		intPrint(a / 10);
-	}
-	_putchar((a % 10) + '0');
-
-}
-/**
 * printInt - print integer
 * @i: integer argument
 * Return: int bytes
 */
 int printInt(va_list i)
 {
-	int a = 0;
+	int f = 0, m = 1, c = 1;
 
-	a = va_arg(i, int);
+	f = va_arg(i, int);
 
-	intPrint(a);
-	return (4);
+	if (f < 0)
+	{
+		_putchar('-');
+		f *= -1;
+		c += 1;
+	}
+	if (f < 10)
+	{
+		_putchar(f);
+		return (1);
+	}
+	while ((f / m) >= 10)
+	{
+		m *= 10;
+		c++;
+	}
+	m *= 10;
+	while (m > 1)
+	{
+		_putchar(((f % m) / (m / 10)) + '0');
+		m /= 10;
+	}
+	return (c);
 }

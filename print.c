@@ -55,8 +55,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
-			_putchar(format[i]);
-			count++;
+			count += putPercent(format[i], format[i + 1]);
 			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] != '%')
@@ -64,10 +63,12 @@ int _printf(const char *format, ...)
 			f = specifiers(&format[i + 1]);
 			if (f == NULL)
 			{
+				count += putPercent(format[i], format[i + 1]);
 				i += 1;
 				continue;
 			}
 			count += f(ap);
+
 			i += 2;
 		}
 			count += _putchar(format[i]);

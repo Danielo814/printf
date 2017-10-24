@@ -17,7 +17,7 @@ typedef struct print
 	int (*f)(va_list);
 } _types;
 
-int putPercent(char s);
+int putPercent(char s, char n);
 int printInt(va_list d);
 int printInt(va_list i);
 int printstring(va_list s);

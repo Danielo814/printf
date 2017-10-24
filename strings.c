@@ -41,10 +41,21 @@ int printchar(va_list c)
 /**
 * putPercent - print char
 * @s: char parameter
+* @n: char parameter
 * Return: sizof char
 */
-int putPercent(char s)
+int putPercent(char s, char n)
 {
-	_putchar(s);
-	return (1);
+	if (n == '%')
+	{
+		_putchar(n);
+		return (1);
+	}
+	if (n != '%')
+	{
+		_putchar(s);
+		_putchar(n);
+		return (2);
+	}
+	return (0);
 }
