@@ -50,17 +50,24 @@ int _printf(const char *format, ...)
 	va_start(ap, format);
 	for (i = 0; format[i]; i++)
 	{
-		if (format[i] == '%' && format[i + 1] == '%')
+		if (format[i] == '%' && format[i + 1] == '\0')
+		{
+			_putchar('\n');
+			return (-1);
+		}
+		else if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar('%');
 			count++;
+			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] != '%')
 		{
 			f = specifiers(&format[i + 1]);
 			if (f == NULL)
 			{
-				return (-1);
+				i += 1;
+				continue;
 			}
 			count += f(ap);
 			i += 2;
