@@ -1,5 +1,6 @@
 # _printf
 _printf will produce a formatted output
+
 **Prototype:** int _printf(const char *format, ...)
 # Description
 This is a custom version of printf that was made using key concepts that Holberton School students have used since starting the course on September 5, 2017.
