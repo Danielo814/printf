@@ -1,4 +1,4 @@
-.TH man 3 "22 October 2017" "0.10" "_printf man page"
+.TH man 3 "22 October 2017" "_printf man page"
 .SH NAME
 .B _printf
 - Formatted output conversion/
@@ -17,6 +17,7 @@ string that specifies how arguments are converted for output.
 On succesful return, the functions will return the numbers of characters printed excluding the null byte.
 If output error is found, a negative value will be returned.
 .SH Format of the format string
+The format string is a character string, composed of zero or more directives: ordinary characters (not %), are copied to the output stream; and conversion specifications, which result in fetching zero or more subsequent arguments. Each conversion specification is introduced by the character  % , and ends with a conversion specifier.
 .SH The conversion specifier
 A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are:
 .TP
@@ -31,3 +32,19 @@ The int argument is converted to signed decimal notation.
 .TP
 .B %
 A '%' is written. No argument is converted. The complete conversion specification is '%%'.
+.SH Bugs
+There are no known bugs
+.SH Example
+To print a persons name, the first letter of their name, and their birthdate where name is a pointer to a string of characters, first letter of their name is a single character, and their birthdate is a combination of strings and integers you would provide the following input.
+
+
+#include "holberton.h"
+
+
+_printf("The name of the is user is %s, the first letter of their name is %c, their birthdate is %s %i, %d\n", name, letter, birthmonth, birthday, birthyear).
+.SH See also
+.I printf(3)
+.SH Authors
+James Heck
+
+Daniel Ojeda
