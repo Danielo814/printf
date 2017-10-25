@@ -41,7 +41,7 @@ To print a persons name, the first letter of their name, and their birthdate whe
 #include "holberton.h"
 
 
-_printf("The name of the is user is %s, the first letter of their name is %c, their birthdate is %s %i, %d\n", name, letter, birthmonth, birthday, birthyear).
+_printf("The name of the is user is %s, the first letter of their name is %c, their birthdate is %s %i, %d", name, letter, birthmonth, birthday, birthyear).
 .SH See also
 .I printf(3)
 .SH Authors
